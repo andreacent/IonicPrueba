@@ -1,0 +1,10 @@
+<ion-view view-title="Colecciones">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="collection in collections" type="item-text-wrap" href="#/tab/collections/{{collection.id}}">
+        <img ng-src="{{collection.face}}">
+        <h2>{{collection.name}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,11 @@
+ <ion-view view-title="{{collection.name}}">
+  <ion-content class="padding">
+    <img ng-src="{{collection.face}}" style="width: 64px; height: 64px">
+    <p>
+      {{collection.lastText}}
+    </p>
+    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="producto in products" type="item-text-wrap" href="#/tab/collections/{{collection.id}}/{{producto.id}}">
+        <h2>{{producto.name}}</h2>
+    </ion-item>
+  </ion-content>
+</ion-view>
