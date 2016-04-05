@@ -29,12 +29,12 @@ angular.module('starter.services', [])
     products:[
       {
         id : 0,
-        name : 'Tomates',
+        name : 'Pavo',
         precio :  '13'
       },
       {
         id : 1,
-        name : 'Lechuga',
+        name : 'Mero',
         precio : '16'
       }
     ]
@@ -46,12 +46,12 @@ angular.module('starter.services', [])
     products:[
       {
         id : 0,
-        name : 'Tomates',
-        precio :  '13'
+        name : 'Pulpo',
+        precio :  '29'
       },
       {
         id : 1,
-        name : 'Lechuga',
+        name : 'Calamar',
         precio : '16'
       }
     ]
@@ -63,12 +63,12 @@ angular.module('starter.services', [])
     products:[
       {
         id : 0,
-        name : 'Tomates',
+        name : 'Tocineta',
         precio :  '13'
       },
       {
         id : 1,
-        name : 'Lechuga',
+        name : 'Nuggets de pollo',
         precio : '16'
       }
     ]
@@ -77,10 +77,7 @@ angular.module('starter.services', [])
   return {
     all: function() {
       return collections;
-    },
-    remove: function(collection) {
-      collections.splice(collections.indexOf(collection), 1);
-    },
+    }, 
     get: function(collectionId) {
       for (var i = 0; i < collections.length; i++) {
         if (collections[i].id === parseInt(collectionId)) {
