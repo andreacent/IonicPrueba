@@ -1,8 +1,22 @@
 angular.module('starter.services', [])
 
 .factory('Collections', function() {
-  // Might use a resource here that returns a JSON array
+/*
+//PRUEBA
+.factory('Collections', function($http, ApiEndpoint) {
+        console.log('ApiEndpoint', ApiEndpoint);
 
+        var getApiData = function() {
+            return $http.get(ApiEndpoint.url + '/products');
+        };
+
+        return {
+            getApiData: getApiData
+        };
+        
+//END PRUEBA */
+
+  // Might use a resource here that returns a JSON array
   // Some fake testing data
   var collections = [{
     id: 0,

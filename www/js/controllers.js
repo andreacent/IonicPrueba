@@ -10,6 +10,12 @@ angular.module('starter.controllers', [])
 })
 
 .controller('CollectionCtrl', function($scope, Collections) {
+  /*intentando jalar el json del servidor
+  Collections.getApiData().then(function(result) {
+          $scope.products = result.data;
+  });
+  */
+
   $scope.collections = Collections.all();
 })
 
