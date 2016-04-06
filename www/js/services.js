@@ -8,7 +8,7 @@ angular.module('starter.services', [])
   return {
     getMarkers: function(){
  
-      return $http.get("http://localhost:8080/page1").then(function(response){
+      return $http.get("http://localhost:8080/page2").then(function(response){
           markers = response;
           console.log(markers);
           return markers;
