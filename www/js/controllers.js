@@ -9,14 +9,10 @@ angular.module('starter.controllers', [])
 .controller('HomeCtrl', function() {
 })
 
-.controller('CollectionCtrl', function($scope, Collections) {
-  /*intentando jalar el json del servidor
-  Collections.getApiData().then(function(result) {
-          $scope.products = result.data;
-  });
-  */
-
+.controller('CollectionCtrl', function($scope, Collections, $state, Markers) {
+  console.log(Markers.getMarkers()); //aqui estoy tratando de obtener el json del servidor
   $scope.collections = Collections.all();
+  console.log($scope.collections);
 })
 
 .controller('CollectionDetailCtrl', function($scope, $stateParams, Collections) {

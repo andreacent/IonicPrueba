@@ -1,23 +1,26 @@
 angular.module('starter.services', [])
 
+//estoy tratando de obtener el json del servidor
+.factory('Markers', function($http) {
+ 
+  var markers = [];
+ 
+  return {
+    getMarkers: function(){
+ 
+      return $http.get("http://localhost:8080/page1").then(function(response){
+          markers = response;
+          console.log(markers);
+          return markers;
+      });
+ 
+    }
+  }
+})
+
+//por ahora funciona asi cableado
 .factory('Collections', function() {
-/*
-//PRUEBA
-.factory('Collections', function($http, ApiEndpoint) {
-        console.log('ApiEndpoint', ApiEndpoint);
 
-        var getApiData = function() {
-            return $http.get(ApiEndpoint.url + '/products');
-        };
-
-        return {
-            getApiData: getApiData
-        };
-        
-//END PRUEBA */
-
-  // Might use a resource here that returns a JSON array
-  // Some fake testing data
   var collections = [{
     id: 0,
     name: 'Veggie',
